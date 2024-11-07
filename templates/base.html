@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ahmed Machine Learning Models</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">Dr. Ahmed Site</a>
+            <div class="nav-links">
+                <a href="{{ url_for('api') }}">API</a>
+                <a href="{{ url_for('models') }}">Models</a>
+                <a href="{{ url_for('data') }}">Data</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+
+</html>

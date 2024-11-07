@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>We have created 3 models</p>
+<br>
+<b>Instructions:</b>
+<form method="POST" action="{{ url_for('models') }}">
+    <label for="user_input">Input:</label>
+    <input type="text" id="user_input" name="user_input" required>
+    <button type="submit">Submit</button>
+</form>
+
+{% if length is not none %}
+    <p>Output: {{ length }}</p>
+{% endif %}
+{% endblock %}

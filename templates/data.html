@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>This page contains raw data files that our machine learning models were developed from.</p>
+
+    <br>
+    <a> Data File 1</a>
+    <br>
+    <!-- View and Download links -->
+    <a href="{{ url_for('static', filename='downloads/datafile.csv') }}" target="_blank">View Data File</a>
+    |
+    <a href="{{ url_for('static', filename='downloads/datafile.csv') }}" download>Download Data File</a>
+{% endblock %}
